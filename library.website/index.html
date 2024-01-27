@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="styling.css">
+
+    <style>
+        h2 {
+            color: beige;
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            background-image: url('https://images7.alphacoders.com/132/1326369.png');
+            background-repeat: no-repeat;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            from {
+                background-color: #000;
+            }
+            to {
+                background-color: #222;
+            }
+        }
+
+        .btn {
+            align-items: center;
+            justify-content: center;
+            background-color: beige;
+            color: black;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 20px auto;
+            display: flex;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: rgb(202, 202, 145);
+            color: black;
+        }
+
+        .btn:hover a {
+            text-decoration: none;
+        }
+
+        .navbar-brand {
+            color: black;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        .navbar-brand i {
+            font-style: italic;
+            color: black;
+        }
+
+        .nav-link {
+            color: beige;
+            animation: fadeInRight 1s ease-in-out;
+        }
+
+        .book-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+            color: black;
+        }
+
+        #Hero {
+            margin-top: -50px;
+        }
+
+        
+        .find-story {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 1s; 
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <div class="navbar-brand">
+            <i class="fas fa-book-open book-icon"></i>
+            <span style="font-style: italic; color: black;">READ IT</span>
+        </div>
+
+        <div>
+            <ul id="nav-bar">
+                <li><a class="active" href="#">Home</a></li>
+
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </div>
+
+    </section>
+    <div class="container mt-5">
+        <h2><strong><i>Welcome</i></strong></h2>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="button" onclick="window.location.href='books.html'">GET STARTED</button>
+
+            <p class="find-story">Find your story</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
