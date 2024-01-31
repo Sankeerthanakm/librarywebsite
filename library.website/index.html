@@ -4,145 +4,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    
+    <link rel="stylesheet" href="styling.css">
+
     <style>
+        h2 {
+            color: beige;
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3508.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
+            background-image: url('https://images7.alphacoders.com/132/1326369.png');
+            background-repeat: no-repeat;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            from {
+                background-color: #000;
+            }
+            to {
+                background-color: #222;
+            }
+        }
+
+        .btn {
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background-color: beige;
+            color: black;
+            border: 2px solid black;
             padding: 10px;
-            background-color: rgb(218, 247, 247); 
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
+            margin: 20px auto;
+            display: flex;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
         }
 
-        .library-name {
-            font-size: 1.5rem;
+        .btn:hover {
+            background-color: rgb(202, 202, 145);
+            color: black;
+        }
+
+        .btn:hover a {
+            text-decoration: none;
+        }
+
+        .navbar-brand {
+            color: black;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        .navbar-brand i {
+            font-style: italic;
+            color: black;
+        }
+
+        .nav-link {
+            color: beige;
+            animation: fadeInRight 1s ease-in-out;
         }
 
         .book-icon {
-            font-size: 1.5rem;
+            font-size: 1.5em;
             margin-right: 5px;
+            color: black;
         }
 
-        .login-container {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 300px;
+        #Hero {
+            margin-top: -50px;
         }
 
-        .login-heading {
-            background-color: #1877f2;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 0;
+        
+        .find-story {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 1s; 
         }
+        .dropdown {
+    display: inline-block;
+    position: relative;
+}
 
-        .login-form {
-            padding: 20px;
-        }
+.dropbtn {
+    color: beige;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.dropbtn::after {
+    content: '\25BC'; 
+    font-size: 0.7em; 
+    margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-        .form-group label {
-            display: block;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
 
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
 
-        .form-group button {
-            width: 100%;
-            padding: 10px;
-            background-color: #1877f2;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: bold;
-        }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
 
-        .signup-link {
-            text-align: center;
-            margin-top: 10px;
-        }
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
-        .signup-button {
-            display: inline-block;
-            padding: 10px;
-            background-color: #42b72a;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        .fas{
-        font-style: italic;
-    }
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
     </style>
-    <title>Login Form</title>
 </head>
 
 <body>
-    <div class="navbar">
-       
-        <div class="library-name">
-            <i class="fas fa-book-open book-icon"></i> <i>READ IT</i>
+    <section id="header">
+        <div class="navbar-brand">
+            <i class="fas fa-book-open book-icon"></i>
+            <span style="font-style: italic; color: black;">READ IT</span>
+        </div>
+
+        <div>
+            <ul id="nav-bar">
+                <li><a class="active" href="#">Home</a></li>
+
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Account</a>
+                    <div class="dropdown-content">
+                        <a href="landing.html">Login</a>
+                        <a href="landing.html">Signup</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </section>
+    <div class="container mt-5">
+        <h2><strong><i>Welcome</i></strong></h2>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="button" onclick="window.location.href='books.html'">GET STARTED</button>
+
+            <p class="find-story">Find your story</p>
         </div>
     </div>
-    <div class="login-container">
-        <h1 class="login-heading">Login Form</h1>
-        <form class="login-form" action="landing.html" method="">
-            <div class="form-group">
-                <label for="emailPhone">Email or Phone Number</label>
-                <input type="text" id="emailPhone" name="emailPhone" placeholder="Enter your email address or phone number">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
-            </div>
-            <div class="form-group">
-                <button type="submit">Log In</button>
-            </div>
-        </form>
-        <div class="signup-link">
-            <p>If you don't have an account, <a href="signup.html" class="signup-button">Sign Up</a></p>
-        </div>
-    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
