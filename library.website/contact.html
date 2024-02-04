@@ -1,0 +1,419 @@
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('https://wallpapers.com/images/hd/light-color-background-x69l528mcyszadke.jpg');
+            background-repeat: repeat-y;
+        }
+
+        #contact-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        #contact-details .details {
+            width: 40%;
+        }
+
+        #contact-details .details span,
+        #form-details form span {
+            font-size: 12px;
+        }
+
+        #contact-details .details h2,
+        #form-details form h2 {
+            font-size: 26px;
+            line-height: 35px;
+            padding: 20px 0;
+        }
+
+        #contact-details .details h3 {
+            font-size: 16px;
+            padding-bottom: 15px;
+        }
+
+
+        #contact-details .details li {
+            list-style: none;
+            display: flex;
+            padding: 10px 0;
+
+        }
+
+        #contact-details .details li i {
+            font-size: 14px;
+            padding-right: 22px;
+
+        }
+
+        #contact-details .details li p {
+            font-size: 14px;
+            margin: 0;
+
+        }
+
+        #contact-details .map {
+            height: 400px;
+            width: 55%;
+        }
+
+        #contact-details .map iframe {
+            height: 100%;
+            width: 100%;
+        }
+
+
+        #form-details {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px;
+            padding: 80px;
+            border: 1px solid #e1e1e1;
+        }
+
+
+
+
+
+
+        #form-details form {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #form-details form input,
+        #form-details form textarea {
+            width: 100%;
+            padding: 12px;
+            outline: none;
+            margin-bottom: 20px;
+            border: 1px solid #e1e1e1;
+        }
+
+        #form-details form button {
+            background-color: #088178;
+            color: white;
+        }
+
+        #form-details .people div {
+            padding-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #form-details .people div img {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        #form-details .people div p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 25px;
+        }
+
+        #form-details .people div span {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        #newsletter {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            background-image: url(img/banner/b14.png);
+            background-repeat: no-repeat;
+            background-position: 20% 30%;
+            background-color: #041e42;
+            height: 20vh;
+        }
+
+        #newsletter .newtext h4 {
+            color: white;
+            padding-left: 60px;
+            font-weight: 700;
+            font-size: 22px;
+
+        }
+
+        #newsletter .newtext span {
+            color: rgba(255, 170, 0, 0.985);
+        }
+
+        #newsletter .newtext p {
+            color: gray;
+            padding-left: 60px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        #newsletter .form {
+            padding-right: 60px;
+            border: 1px;
+            border-radius: 3px;
+        }
+
+        #newsletter input {
+            height: 3.125rem;
+            padding: 0 1.25em;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            outline: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        #newsletter button {
+            background-color: #088178;
+            color: white;
+            white-space: nowrap;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        #newsletter .form {
+            display: flex;
+            width: 40%;
+        }
+
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+           
+        }
+
+        footer .col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 30px;
+
+        }
+
+        footer .logo {
+            margin-bottom: 30px;
+        }
+
+        footer h4 {
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+
+        footer p {
+            font-size: 13px;
+            padding: 0 0 8px 0;
+        }
+
+        footer a {
+            font-size: 13px;
+            text-decoration: none;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        footer .follow i {
+            padding-right: 4px;
+            color: #465b52;
+            cursor: pointer;
+        }
+
+        footer .install .row img {
+            border: 1px solid#088178;
+            border-radius: 6px;
+        }
+
+        footer .install img {
+            margin: 10px 0 15px 0;
+        }
+
+        footer .follow i:hover,
+        footer a:hover {
+            color: #088178;
+        }
+
+        footer .copy-right {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech2etc Ecommerce Tutorial</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <div class="navbar-brand">
+            <i class="fas fa-book-open book-icon"></i>
+            <span style="font-style: italic; color: black; font-weight: bold;">READ IT</span>
+        </div>
+
+        <div>
+            <ul id="nav-bar">
+                <li><a href="index.html">Home</a></li>
+<!-- 
+                <li><a href="#">Blog</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+
+
+
+            </ul>
+        </div>
+
+    </section>
+    <section id="page-header" class="about-header">
+
+        <h2>#let's_talk</h2>
+
+        <p>LEAVE A MESSAGE,We love to hear from you!</p>
+
+    </section>
+
+    <section id="contact-details" class="section-p1">
+
+        <div class="details">
+            <span>GET IN TOUCH</span>
+            <h2>Visit one of our agency locations or contact us today</h2>
+            <!-- <h3>Head Office</h3> -->
+            <!-- <div>
+                <li>
+                    <i class="fal fa-map"></i>
+                    <p>56 Glassford Street Glasgow G1 1UL New York</p>
+                </li>
+                <li>
+                    <i class="fal fa-envelope"></i>
+                    <p>contact@example.com</p>
+                </li>
+                <li>
+                    <i class="fal fa-clock"></i>
+                    <p>Monday to Saturday : 9.00am to 16.pm</p>
+                </li>
+                <li>
+                    <i class="fal fa-map"></i>
+                    <p>56 Glassford Street Glasgow G1 1UL New York</p>
+                </li>
+            </div> -->
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.
+    84916296526!2d77.63093950000001!3d12.
+    953997400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+    1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka
+    !5e0!3m2!1sen!2sin!4v1699363543568!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section id="form-details" class="section-p1">
+        <form action="">
+            <span>LEAVE A MESSAGE</span>
+            <H2>We love to hear from you</H2>
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="E-Mail">
+            <input type="text" placeholder="Subject">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button class="normal">Submit</button>
+        </form>
+
+
+    </section>
+
+
+    <footer class=" section-p1">
+        <div class="col">
+            <i><i class="fas fa-book-open book-icon"></i></i>
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 562 Wellington road, Street 32, San Fransisco</p>
+            <p><strong>Phone:</strong>+01 2222 365 / (+91) 01 2345 6789</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google PLAY</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+
+        </div>
+        <div class="copy-right">
+            <p> © 2021, Tech2 etc- HTML CSS Ecommerce Template </p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>

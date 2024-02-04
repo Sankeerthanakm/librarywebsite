@@ -51,7 +51,7 @@ p {
 
 body {
   width: 100%;
-  background-image: url('https://images7.alphacoders.com/132/1326369.png');
+  /* background-image: url('https://images7.alphacoders.com/132/1326369.png'); */
   background-repeat: no-repeat;
   animation: backgroundAnimation 10s infinite alternate;
 }
@@ -142,3 +142,17 @@ body {
   margin-bottom: 25px;
 }
 }
+
+#about-head img{
+width: 50%;
+height: auto;
+}
+
+#about-head{
+  display: flex;
+  align-items: center;
+}
+#about-head div{
+padding-left: 40px;
+}
+

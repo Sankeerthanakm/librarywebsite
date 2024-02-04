@@ -28,6 +28,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -36,14 +37,24 @@
 
         body {
             background-image: url('https://images7.alphacoders.com/132/1326369.png');
-            background-repeat: no-repeat;
-            animation: backgroundAnimation 10s infinite alternate;
+
+            /* background-repeat: no-repeat; */
+            /* animation: backgroundAnimation 10s infinite alternate; */
+
+            /* box-sizing: border-box; */
+            background-size: cover;
+
+            overflow: scroll;
+            position: relative;
+
         }
+
 
         @keyframes backgroundAnimation {
             from {
                 background-color: #000;
             }
+
             to {
                 background-color: #222;
             }
@@ -100,101 +111,246 @@
             margin-top: -50px;
         }
 
-        
+
         .find-story {
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s ease-in-out forwards;
-            animation-delay: 1s; 
+            animation-delay: 1s;
         }
+
         .dropdown {
-    display: inline-block;
-    position: relative;
-}
+            display: inline-block;
+            position: relative;
+        }
 
-.dropbtn {
-    color: beige;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+        .dropbtn {
+            color: beige;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-.dropbtn::after {
-    content: '\25BC'; 
-    font-size: 0.7em; 
-    margin-left: 5px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
+        .dropbtn::after {
+            content: '\25BC';
+            font-size: 0.7em;
+            margin-left: 5px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
 
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-image: url('https://getwallpapers.com/wallpaper/full/f/8/6/233675.jpg');
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+
+
+
+
+        footer .col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 30px;
+
+        }
+
+        footer .logo {
+            margin-bottom: 30px;
+        }
+
+        footer h4 {
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+
+        footer p {
+            font-size: 13px;
+            padding: 0 0 8px 0;
+        }
+
+        footer a {
+            font-size: 13px;
+            text-decoration: none;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        footer .follow i {
+            padding-right: 4px;
+            color: #465b52;
+            cursor: pointer;
+        }
+
+        footer .install .row img {
+            border: 1px solid#088178;
+            border-radius: 6px;
+        }
+
+        footer .install img {
+            margin: 10px 0 15px 0;
+        }
+
+        footer .follow i:hover,
+        footer a:hover {
+            color: #088178;
+        }
+
+        footer .copy-right {
+            width: 100%;
+            text-align: center;
+        }
+
+        #wrapper {
+            height: 100vh;
+        }
     </style>
 </head>
 
 <body>
-    <section id="header">
-        <div class="navbar-brand">
-            <i class="fas fa-book-open book-icon"></i>
-            <span style="font-style: italic; color: black;">READ IT</span>
-        </div>
+    <div id="wrapper">
+        <section id="header">
+            <div class="navbar-brand">
+                <i class="fas fa-book-open book-icon"></i>
+                <span style="font-style: italic; color: black;">READ IT</span>
+            </div>
 
+            <div>
+                <ul id="nav-bar">
+                    <li><a class="active" href="index.html">Home</a></li>
+
+
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                    <!-- <li class="dropdown">
+                        <a href="#" class="dropbtn">Account</a>
+                        <div class="dropdown-content">
+                            <a href="landing.html">Login</a>
+                            <a href="landing.html">Signup</a>
+                        </div>
+                    </li> -->
+
+                </ul>
+            </div>
+
+        </section>
+        <div class="container mt-5">
+            <h2><strong><i>Welcome</i></strong></h2>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary" type="button" onclick="window.location.href='login.html'">GET
+                    STARTED</button>
+
+                <p class="find-story">Find your story</p>
+            </div>
+        </div>
         <div>
-            <ul id="nav-bar">
-                <li><a class="active" href="#">Home</a></li>
 
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Account</a>
-                    <div class="dropdown-content">
-                        <a href="landing.html">Login</a>
-                        <a href="landing.html">Signup</a>
-                    </div>
-                </li>
 
-            </ul>
-        </div>
 
-    </section>
-    <div class="container mt-5">
-        <h2><strong><i>Welcome</i></strong></h2>
 
-        <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-primary" type="button" onclick="window.location.href='books.html'">GET STARTED</button>
 
-            <p class="find-story">Find your story</p>
+
+
+
         </div>
     </div>
+
+    <footer>
+        <div class="col" style="margin-bottom: 0;">
+    
+            <i class="fas fa-book-open book-icon"></i>
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 562 Wellington road, Street 32, San Francisco</p>
+            <p><strong>Phone:</strong> +01 2222 365 / (+91) 01 2345 6789</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google PLAY</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copy-right">
+            <p>© 2021, Tech2 etc- HTML CSS Ecommerce Template </p>
+        </div>
+    </footer>
+    
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
 </body>
 
 </html>
