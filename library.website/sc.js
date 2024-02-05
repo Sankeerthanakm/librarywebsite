@@ -15,14 +15,14 @@ function validateSignUpForm() {
   phoneError.textContent = '';
   passwordError.textContent = '';
 
-  // Validate Name
+  
   const nameValue = nameInput.value.trim();
   if (nameValue === '') {
     nameError.textContent = 'Name is required';
     return false;
   }
 
-  // Validate Email
+  
   const emailValue = emailInput.value.trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(emailValue)) {
@@ -30,7 +30,7 @@ function validateSignUpForm() {
     return false;
   }
 
-  // Validate Phone Number
+
   const phoneValue = phoneInput.value.trim();
   const phoneValidation = validatePhoneNumber(phoneValue);
   if (!phoneValidation.valid) {
@@ -38,7 +38,7 @@ function validateSignUpForm() {
     return false;
   }
 
-  // Validate Password
+ 
   const passwordValue = passwordInput.value.trim();
   const passwordValidation = validatePassword(passwordValue);
   if (!passwordValidation.valid) {
@@ -46,7 +46,7 @@ function validateSignUpForm() {
     return false;
   }
 
-  // Indicate password strength
+ 
   indicatePasswordStrength(passwordValue);
 
   return true;
