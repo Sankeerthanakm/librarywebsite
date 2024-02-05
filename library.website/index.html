@@ -59,6 +59,9 @@
                 background-color: #222;
             }
         }
+        .btn-container {
+            position: relative;
+        }
 
         .btn {
             align-items: center;
@@ -72,6 +75,17 @@
             text-align: center;
             font-weight: bold;
             transition: background-color 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden; 
+        }
+
+
+        .btn i {
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: transform 0.3s ease-in-out;
         }
 
         .btn:hover {
@@ -81,6 +95,9 @@
 
         .btn:hover a {
             text-decoration: none;
+        }
+        .btn:hover i {
+            transform: translateY(-5px); /
         }
 
         .navbar-brand {
@@ -164,22 +181,15 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
+       
 
         footer {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            background-image: url('https://getwallpapers.com/wallpaper/full/f/8/6/233675.jpg');
-            padding: 20px;
-            position: relative;
-            width: 100%;
-            bottom: 0;
+             background-image: url('https://getwallpapers.com/wallpaper/full/f/8/6/233675.jpg');
+           
         }
-
-
-
-
 
         footer .col {
             display: flex;
@@ -237,8 +247,21 @@
         }
 
         #wrapper {
-            height: 100vh;
+            height: calc(100vh - -300px);
         }
+        .row{
+            display: flex;
+            
+        }
+        .row img :hover{
+            background-color: #088178;
+        }
+        .row img{
+            height: 50px;
+            width: 120px;
+        }
+       
+
     </style>
 </head>
 
@@ -258,13 +281,7 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
 
-                    <!-- <li class="dropdown">
-                        <a href="#" class="dropbtn">Account</a>
-                        <div class="dropdown-content">
-                            <a href="landing.html">Login</a>
-                            <a href="landing.html">Signup</a>
-                        </div>
-                    </li> -->
+                  
 
                 </ul>
             </div>
@@ -272,11 +289,14 @@
         </section>
         <div class="container mt-5">
             <h2><strong><i>Welcome</i></strong></h2>
-
+    
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" type="button" onclick="window.location.href='login.html'">GET
-                    STARTED</button>
-
+                <div class="btn-container">
+                    <button class="btn btn-primary" type="button" onclick="window.location.href='login.html'">
+                        Get Started
+                        <i class="fas fa-mouse-pointer"></i>
+                    </button>
+                </div>
                 <p class="find-story">Find your story</p>
             </div>
         </div>
@@ -294,7 +314,7 @@
     </div>
 
     <footer>
-        <div class="col" style="margin-bottom: 0;">
+        <div class="col" style="margin-bottom: 0; margin-left: 100px;">
     
             <i class="fas fa-book-open book-icon"></i>
             <h4>Contact</h4>
@@ -323,23 +343,23 @@
         <div class="col">
             <h4>My Account</h4>
             <a href="#">Sign In</a>
-            <a href="#">View Cart</a>
-            <a href="#">My Wishlist</a>
-            <a href="#">Track My Order</a>
+            <a href="#">Join Now</a>
+            <a href="#">Home</a>
+            <a href="#">Books</a>
             <a href="#">Help</a>
         </div>
         <div class="col install">
             <h4>Install App</h4>
             <p>From App Store or Google PLAY</p>
             <div class="row">
-                <img src="img/pay/app.jpg" alt="">
-                <img src="img/pay/play.jpg" alt="">
+                <img src="https://play.google/howplayworks/static/assets/social/share_google_play_logo.png" alt="">
+                <img src="https://1000logos.net/wp-content/uploads/2020/08/apple-app-store-logo.jpg" alt="">
             </div>
             <p>Secured Payment Gateways</p>
-            <img src="img/pay/pay.png" alt="">
+           
         </div>
         <div class="copy-right">
-            <p>© 2021, Tech2 etc- HTML CSS Ecommerce Template </p>
+            <p>© 2024,Read It </p>
         </div>
     </footer>
     

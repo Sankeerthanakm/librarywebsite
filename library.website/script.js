@@ -5,23 +5,26 @@ function validateLoginForm() {
     const emailPhoneError = document.getElementById('emailPhoneError');
     const passwordError = document.getElementById('passwordError');
     const passwordStrength = document.getElementById('passwordStrength');
-    const form=document.getElementsByClassName('login-form');
+    const form = document.getElementsByClassName('login-form');
 
-    
+
     emailPhoneError.textContent = '';
     passwordError.textContent = '';
     passwordStrength.textContent = '';
 
-   
+
     const emailPhoneValue = emailPhoneInput.value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^(?:(?:\+|0{0,2})91(\s*[-]\s*)?|[0]?)?[6789]\d{9}$/;
-    if (!(emailRegex.test(emailPhoneValue) || phoneRegex.test(emailPhoneValue))) {
+    const additionalPhoneFormats = /^(?:(?:\+|0{0,2})91(\s*[-.\s]*)?|[0]?)?[6789]\d{2}[-.\s]?\d{3}[-.\s]?\d{4}$/;
+
+    if (!(emailRegex.test(emailPhoneValue) || phoneRegex.test(emailPhoneValue) || additionalPhoneFormats.test(emailPhoneValue))) {
         emailPhoneError.textContent = 'Invalid email or phone number';
         return false;
     }
 
-    
+
+
     const passwordValue = passwordInput.value.trim();
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     if (!passwordRegex.test(passwordValue)) {
@@ -29,14 +32,14 @@ function validateLoginForm() {
         return false;
     }
 
-  
+
     const passwordStrengthText = getPasswordStrengthText(passwordValue);
     passwordStrength.textContent = `Password Strength: ${passwordStrengthText}`;
     passwordStrength.style.color = getPasswordStrengthColor(passwordStrengthText);
 
 
     setTimeout(() => {
-       form.submit()
+        form.submit()
     }, 8000);
 
     return true;

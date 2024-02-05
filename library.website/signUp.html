@@ -98,6 +98,8 @@
     .invalid-feedback {
       color: red;
     }
+
+    
   </style>
   <title>Sign Up Form</title>
 </head>
@@ -113,7 +115,7 @@
     <form class="signup-form" action="books.html" method="" onsubmit="return validateSignUpForm()">
       <div class="form-group">
         <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <input type="text" id="name" placeholder="Enter your full name" required>
         <div class="invalid-feedback" id="nameError"></div>
       </div>
       <div class="form-group">
@@ -121,18 +123,26 @@
         <input type="email" id="email" name="email" placeholder="Enter your email address" required>
         <div class="invalid-feedback" id="emailError"></div>
       </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        <div class="invalid-feedback" id="phoneError"></div>
+      </div>
+
       <div class="form-group">
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
         <div class="invalid-feedback" id="passwordError"></div>
-      </div>
+        <div class="password-strength" id="passwordStrength"></div>
+          
       <div class="form-group">
         <button type="submit">Sign Up</button>
       </div>
     </form>
   </div>
 
- <script src="sc.js"></script>
+  <script src="sc.js"></script>
 </body>
 
 </html>
